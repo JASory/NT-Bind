@@ -1,0 +1,22 @@
+[package]
+name = "ntbind"
+version = "0.0.18"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+number-theory = {path = "/home/commander/Computers/Projects/ENT"}
+
+[lib]
+name = "numbertheory"
+crate-type = ["cdylib"] 
+
+
+[package.metadata.deb]
+maintainer = "J.A. Sory"
+copyright = "J.A. Sory 2023"     
+license-file = "/home/commander/Computers/Projects/ENT/LICENSE"
+extended-description = "Fast number theoretic function evaluation for machine-sized integers"
+priority = "Optional"
+
