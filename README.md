@@ -18,12 +18,31 @@ Then copy the library produced to /lib/. All further instructions are assuming t
 cp NT-Bind/target/release/libnumbertheory.so /lib/libnumbertheory.so
 ```
 ### Static
-Edit the Cargo.toml to 
+Edit the Cargo.toml to change the cdylib to staticlib. Then perform the same steps as with the dynamic example except now the library is called libnumbertheory.a
 
+### Debian package
+Enter the NT-Bind folder and run cargo deb {if it has been installed}
+```
+cd NT-Bind && cargo deb 
+```
+Then install the debian package. This will automatically install the dynamic library into the /lib folder
+```
+apt install NT-Bind/target/release/nt-bind-0.0.18.deb
+```
 # Ada
-   Generically implemented 
+   Generically implemented NumberTheory for all T in range <> and T in mod <>
+   To use run 
+   ```
+   gnatmake nt_ada.adb -largs /lib/numbertheory
+   ```
+  gnatmake will automatically compile the other files that nt_ada.adb depends on. 
+  Ada implements exception handling for 
 # C
 
 # Fortran
-
+ Generically implemented NumberTheory for Integer(Kind=4) and Integer(Kind=8)
+ To use run 
+ ```
+ gfortran nt_fortran.f08 numbertheory.f08 /lib/numbertheory.so
+ ```
 # Julia
