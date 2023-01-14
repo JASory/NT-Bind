@@ -1,6 +1,6 @@
 # NT-Bind
 Bindings for ENT in various languages. Targeting gcc, g++, gfortran, and gnat. May work in other compilers but it is not currently designed to. To use this library run 
-```
+```bash
   git clone https:://github.com/JASory/NT-Bind
 ```
 Go into the directory
@@ -10,11 +10,11 @@ Go into the directory
 Compile the library one of three ways: dynamic {default}, static, or Debian package {dynamic}
 
 ### Dynamic 
-```
+```bash
 cargo build --release
 ```
 Then copy the library produced to /lib/. All further instructions are assuming that the user has copied the library to /lib
-```
+```bash
 cp NT-Bind/target/release/libnumbertheory.so /lib/libnumbertheory.so
 ```
 ### Static
@@ -22,17 +22,17 @@ Edit the Cargo.toml to change the cdylib to staticlib. Then perform the same ste
 
 ### Debian package
 Enter the NT-Bind folder and run cargo deb {if it has been installed}
-```
+```bash
 cd NT-Bind && cargo deb 
 ```
 Then install the debian package. This will automatically install the dynamic library into the /lib folder
-```
+```bash
 apt install NT-Bind/target/release/nt-bind-0.0.18.deb
 ```
 # Ada
    Generically implemented NumberTheory for all T in range <> and T in mod <>
    To use run 
-   ```
+   ```bash
    gnatmake nt_ada.adb -largs /lib/numbertheory
    ```
   gnatmake will automatically compile the other files that nt_ada.adb depends on. 
@@ -42,7 +42,7 @@ apt install NT-Bind/target/release/nt-bind-0.0.18.deb
 # Fortran
  Generically implemented NumberTheory for Integer(Kind=4) and Integer(Kind=8)
  To use run 
- ```
+ ```bash
  gfortran nt_fortran.f08 numbertheory.f08 /lib/numbertheory.so
  ```
 # Julia
