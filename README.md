@@ -4,7 +4,7 @@ Bindings for ENT in various languages. Targeting gcc, g++, gfortran, and gnat. M
   git clone https:://github.com/JASory/NT-Bind
 ```
 Go into the directory
-```
+```bash
   cd NT-Bind
 ```  
 Compile the library one of three ways: dynamic {default}, static, or Debian package {dynamic}
