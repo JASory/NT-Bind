@@ -29,7 +29,7 @@ Then install the debian package. This will automatically install the dynamic lib
 ```bash
 apt install NT-Bind/target/release/nt-bind-0.0.18.deb
 ```
-In the future this library may be distributed 
+In the future this library may be distributed in the Debian repository
 
 # Ada
    Generically implemented NumberTheory for all T in range <> and T in mod <>
