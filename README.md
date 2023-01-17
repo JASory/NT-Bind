@@ -38,7 +38,7 @@ In the future this library may be distributed
    gnatmake nt_ada.adb -largs /lib/numbertheory
    ```
   gnatmake will automatically compile the other files that nt_ada.adb depends on. 
-  Ada implements exception handling for 
+  Ada implements exception handling for values that cannot be computed within the integer range or do not exist
 # C
 
 # Fortran
