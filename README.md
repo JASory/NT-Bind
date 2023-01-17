@@ -48,3 +48,7 @@ In the future this library may be distributed in the Debian repository
  gfortran nt_fortran.f08 numbertheory.f08 /lib/numbertheory.so
  ```
 # Julia
+To use this library include it at the start of the file or REPL
+``` julia
+ include("/Nt-Bind/numbertheory.jl")
+```
