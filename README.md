@@ -35,7 +35,7 @@ In the future this library may be distributed in the Debian repository
    Generically implemented NumberTheory for all `T in range <>` and `T in mod <>`
    To use run 
    ```bash
-   gnatmake nt_ada.adb -largs /lib/numbertheory
+   gnatmake test.adb -largs /lib/numbertheory
    ```
   gnatmake will automatically compile the other files that nt_ada.adb depends on. 
   Ada implements exception handling for values that cannot be computed within the integer range or do not exist
