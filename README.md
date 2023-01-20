@@ -39,6 +39,7 @@ In the future this library may be distributed in the Debian repository
    ```
   gnatmake will automatically compile the other files that nt_ada.adb depends on. 
   Ada implements exception handling for values that cannot be computed within the integer range or do not exist
+  
 # C
 
 # C++
@@ -47,7 +48,7 @@ In the future this library may be distributed in the Debian repository
  Generically implemented NumberTheory for Integer(Kind=4) and Integer(Kind=8)
  To use run 
  ```bash
- gfortran nt_fortran.f08 numbertheory.f08 /lib/numbertheory.so
+ gfortran test.f08 numbertheory.f08 /lib/numbertheory.so
  ```
 # Julia
 To use this library include it at the start of the file or REPL
