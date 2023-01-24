@@ -379,10 +379,241 @@ begin
 end exp_residuei;
 
 
+-- Legendre symbol for Naturals 
+function legendren(X,Y: T) return Short_Short_Integer
+
+ is 
+
+  Flag : unsigned_char;
+  C_Result : signed_char; 
+  Result : Short_Short_Integer; 
+  
+begin 
+  
+  Flag := legendre_64n(unsigned_long(X),unsigned_long(Y),C_Result); 
+     -- Raise exception if 
+  if Flag = 1 then 
+    raise Comp_Error; 
+  else 
+  
+   -- Raise exception if conversion failed
+  Result := Short_Short_Integer(C_Result);
+    
+   return Result;
+   end if;
+   
+end legendren;
 
 
+-- Exponential residue for Integers (mod pow)
+function legendrei(X,Y: T) return Short_Short_Integer is 
+
+  Flag : unsigned_char;
+  C_Result : signed_char; 
+  Result : Short_Short_Integer; 
+  
+begin 
+  
+  Flag := legendre_64i(long(X),long(Y),C_Result); 
+     -- Raise exception if LCM computation failed
+  if Flag = 1 then 
+    raise Comp_Error; 
+  else 
+  
+   -- Raise exception if conversion failed
+  Result := Short_Short_Integer(C_Result);
+    
+   return Result;
+   end if;
+   
+end legendrei;
 
 
+-- Jacobi symbol for Naturals 
+function jacobin(X,Y: T) return Short_Short_Integer
+
+ is 
+
+  Flag : unsigned_char;
+  C_Result : signed_char; 
+  Result : Short_Short_Integer; 
+  
+begin 
+  
+  Flag := jacobi_64n(unsigned_long(X),unsigned_long(Y),C_Result); 
+     -- Raise exception if 
+  if Flag = 1 then 
+    raise Comp_Error; 
+  else 
+  
+   -- Raise exception if conversion failed
+  Result := Short_Short_Integer(C_Result);
+    
+   return Result;
+   end if;
+   
+end jacobin;
+
+
+-- Jacobi symbol for Integers 
+function jacobii(X,Y: T) return Short_Short_Integer 
+
+ is 
+
+  Flag : unsigned_char;
+  C_Result : signed_char; 
+  Result : Short_Short_Integer; 
+  
+begin 
+  
+  Flag := jacobi_64i(long(X),long(Y),C_Result); 
+     -- Raise exception if LCM computation failed
+  if Flag = 1 then 
+    raise Comp_Error; 
+  else 
+  
+   -- Raise exception if conversion failed
+  Result := Short_Short_Integer(C_Result);
+    
+   return Result;
+   end if;
+   
+end jacobii;
+
+
+-- Liouville function for Natural
+
+function liouvillen(X: T) return Short_Short_Integer is 
+
+ begin
+ return Short_Short_Integer(liouville_64n(unsigned_long(X)));
+
+end liouvillen; 
+
+
+-- Liouville function for Natural
+
+function liouvillei(X: T) return Short_Short_Integer is 
+
+ begin
+ return Short_Short_Integer(liouville_64i(long(X)));
+
+end liouvillei; 
+
+
+function mangoldtn(X: T) return Long_Float is 
+
+ begin
+ return Long_Float(mangoldt_64n(unsigned_long(X)));
+
+end mangoldtn; 
+
+
+function mangoldti(X: T) return Long_Float is 
+
+ begin
+ return Long_Float(mangoldt_64i(long(X)));
+
+end mangoldti; 
+
+
+function mobiusn(X: T) return Short_Short_Integer is 
+
+ begin
+ return Short_Short_Integer(mobius_64n(unsigned_long(X)));
+
+end mobiusn; 
+
+
+function mobiusi(X: T) return Short_Short_Integer is 
+
+ begin
+ return Short_Short_Integer(mobius_64i(long(X)));
+
+end mobiusi; 
+
+
+function k_freen(X,K: T) return Boolean is 
+
+ begin
+
+   if k_free_64n(unsigned_long(X), unsigned_long(K)) = 0 then 
+     return False;
+    else
+    return True;
+    end if; 
+
+end k_freen; 
+
+
+function k_freei(X,K: T) return Boolean is 
+
+ begin
+
+if k_free_64i(long(X), long(K)) = 0 then 
+     return False;
+    else
+    return True;
+    end if; 
+
+end k_freei; 
+
+function radicaln(X: T) return T is 
+
+ begin
+ return T(radical_64n(unsigned_long(X)));
+
+end radicaln; 
+
+
+function radicali(X: T) return T is 
+
+ begin
+ return T(radical_64i(long(X)));
+
+end radicali; 
+
+
+function smoothn(X: T) return T is 
+
+ begin
+ return T(smooth_64n(unsigned_long(X)));
+
+end smoothn; 
+
+
+function smoothi(X: T) return T is 
+
+ begin
+ return T(smooth_64i(long(X)));
+
+end smoothi; 
+
+
+function is_smoothn(X,Y: T) return Boolean is 
+
+ begin
+
+   if is_smooth_64n(unsigned_long(X),unsigned_long(Y)) = 0 then 
+     return False;
+    else
+    return True;
+    end if; 
+
+end is_smoothn; 
+
+
+function is_smoothi(X,Y: T) return Boolean is 
+
+ begin
+
+ if is_smooth_64i(long(X), long(Y)) = 0 then 
+     return False;
+    else
+    return True;
+    end if; 
+
+end is_smoothi; 
 
 
 end NT_Ada.NumberTheory;

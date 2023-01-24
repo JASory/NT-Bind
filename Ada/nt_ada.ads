@@ -387,50 +387,50 @@ function exp_residue_64i(x,y,n: long; res: out long) return unsigned_char
      Convention => C,
      External_Name => "exp_residue_64i";
      
-function legendre_32n(x,n: unsigned; res: out char) return unsigned_char
+function legendre_32n(x,n: unsigned; res: out signed_char) return unsigned_char
    with 
      Import => True,
      Convention => C,
      External_Name => "legendre_32n";
      
-function legendre_32i(x,n: int; res: out char) return unsigned_char
+function legendre_32i(x,n: int; res: out signed_char) return unsigned_char
    with 
      Import => True,
      Convention => C,
      External_Name => "legendre_32i";
      
 
-function legendre_64n(x,n: unsigned_long; res: out char) return unsigned_char
+function legendre_64n(x,n: unsigned_long; res: out signed_char) return unsigned_char
    with 
      Import => True,
      Convention => C,
      External_Name => "legendre_64n";
      
-function legendre_64i(x,n: long; res: out short) return unsigned_char
+function legendre_64i(x,n: long; res: out signed_char) return unsigned_char
    with 
      Import => True,
      Convention => C,
      External_Name => "legendre_64i";
      
-function liouville_32n(x: unsigned) return char
+function liouville_32n(x: unsigned) return signed_char
    with 
      Import => True,
      Convention => C,     
      External_Name => "liouville_32n";
      
-function liouville_32i(x: int) return char
+function liouville_32i(x: int) return signed_char
    with 
      Import => True,
      Convention => C,
      External_Name => "liouville_32i";
      
-function liouville_64n(x: unsigned_long) return char
+function liouville_64n(x: unsigned_long) return signed_char
    with 
      Import => True,
      Convention => C,
      External_Name => "liouville_64n";
      
-function liouville_64i(x: long) return char
+function liouville_64i(x: long) return signed_char
    with 
      Import => True,
      Convention => C,
@@ -460,25 +460,25 @@ function mangoldt_64i(x: long) return Long_Float
      Convention => C,     
      External_Name => "mangoldt_64i";
      
-function mobius_32n(x: unsigned) return char
+function mobius_32n(x: unsigned) return signed_char
    with 
      Import => True,
      Convention => C,     
      External_Name => "mobius_32n";
      
-function mobius_32i(x: int) return char
+function mobius_32i(x: int) return signed_char
    with 
      Import => True,
      Convention => C,
      External_Name => "mobius_32i";
      
-function mobius_64n(x: unsigned_long) return char
+function mobius_64n(x: unsigned_long) return signed_char
    with 
      Import => True,
      Convention => C,
      External_Name => "mobius_64n";
      
-function mobius_64i(x: long) return char
+function mobius_64i(x: long) return signed_char
    with 
      Import => True,
      Convention => C,
@@ -521,13 +521,13 @@ function jacobi_32i(x,n: int; res: out char) return unsigned_char
      External_Name => "jacobi_32i";
      
 
-function jacobi_64n(x,n: unsigned_long; res: out char) return unsigned_char
+function jacobi_64n(x,n: unsigned_long; res: out signed_char) return unsigned_char
    with 
      Import => True,
      Convention => C,
      External_Name => "jacobi_64n";
      
-function jacobi_64i(x,n: long; res: out char) return unsigned_char
+function jacobi_64i(x,n: long; res: out signed_char) return unsigned_char
    with 
      Import => True,
      Convention => C,     

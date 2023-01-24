@@ -1,20 +1,15 @@
-with Interfaces.C; use Interfaces.C;
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Real_Time; use Ada.Real_Time;
 with NT_Ada.NumberTheory; use NT_Ada.NumberTheory;
---with NT_Error; use NT_Error;
 
 procedure test is
 
  type Ring is mod 20; 
- 
- SUP : constant u32 := 17;
  LO  : constant Ring := 5;
  HI  : constant Ring := 17;
  PI : Integer := 0;
  N : constant Integer := 7;
  X : constant Integer := 5;
- v : constant signed_char := -1;
  
  
  Start_Time, Stop_Time : Time;
@@ -24,7 +19,7 @@ procedure test is
  
  function primecount is new pin(T => Ring);
  
- function exp is new exp_residuei(T => Integer);
+ function RAD is new legendrei(T => Integer);
    
 begin
 
@@ -49,7 +44,7 @@ Put_Line ("Elapsed time: "
 & Duration'Image (To_Duration (Elapsed_Time))
 & " seconds");
  
-Put_Line (""& Integer'Image(exp(N,N,X)));
+Put_Line (""& Short_Short_Integer'Image(RAD(N,-5)));
 --Put_Line(Ring'Image(LCM(LO,HI)));
 end test;
 

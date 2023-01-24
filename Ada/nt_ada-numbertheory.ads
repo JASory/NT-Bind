@@ -1,7 +1,5 @@
 package NT_Ada.NumberTheory is 
 
- type u32 is mod 2**32;
- type u64 is mod 2**64;
  
 generic type T is mod <>;
   function is_sprpn(X,Y : T) return Boolean;
@@ -87,7 +85,58 @@ generic type T is mod <>;
 generic type T is range <>;
  function exp_residuei(X,Y,N: T) return T;        
    
- 
+generic type T is mod <>;
+ function legendren(X,Y: T) return Short_Short_Integer;  
 
+generic type T is range <>;
+ function legendrei(X,Y: T) return Short_Short_Integer;  
+
+generic type T is mod <>;
+ function jacobin(X,Y: T) return Short_Short_Integer;  
+
+generic type T is range <>;
+ function jacobii(X,Y: T) return Short_Short_Integer;  
+
+generic type T is mod <>;
+ function liouvillen(X: T) return Short_Short_Integer;  
+
+generic type T is range <>;
+ function liouvillei(X: T) return Short_Short_Integer;  
+
+generic type T is mod <>;
+ function mangoldtn(X: T) return Long_Float;  
+
+generic type T is range <>;
+ function mangoldti(X: T) return Long_Float;  
+
+generic type T is mod <>;
+ function mobiusn(X: T) return Short_Short_Integer;  
+
+generic type T is range <>;
+ function mobiusi(X: T) return Short_Short_Integer;  
+
+generic type T is mod <>;
+ function k_freen(X,K: T) return Boolean;  
+
+generic type T is range <>;
+ function k_freei(X,K: T) return Boolean;  
+
+generic type T is mod <>;
+ function radicaln(X: T) return T;  
+
+generic type T is range <>;
+ function radicali(X: T) return T;  
+
+generic type T is mod <>;
+ function smoothn(X: T) return T;  
+
+generic type T is range <>;
+ function smoothi(X: T) return T;  
+
+generic type T is mod <>;
+ function is_smoothn(X,Y: T) return Boolean;  
+
+generic type T is range <>;
+ function is_smoothi(X,Y: T) return Boolean;  
    
 end NT_Ada.NumberTheory;
