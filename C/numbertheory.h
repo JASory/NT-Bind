@@ -1,8 +1,9 @@
-#include <cstdarg>
-#include <cstdint>
-#include <cstdlib>
-#include <ostream>
-#include <new>
+//#include <cstdarg>
+#include <stdint.h>
+#include <stdbool.h>
+//#include <cstdlib>
+//#include <ostream>
+//#include <new>
 
 struct Vecdat {
   uint64_t *_0;
@@ -17,7 +18,7 @@ struct Mpzdat {
   bool _3;
 };
 
-extern "C" {
+//extern "C" {
 
 uint32_t rng_32();
 
@@ -228,7 +229,7 @@ bool is_smooth_32i(int32_t x, int32_t b);
 bool is_smooth_64n(uint64_t x, uint64_t b);
 
 bool is_smooth_64i(int64_t x, int64_t b);
-
+/*
 Vecdat factor_64n(uint64_t x);
 
 Mpzdat mpz_from_string(char *x);
@@ -240,5 +241,5 @@ Vecdat mpz_product(Vecdat x, Vecdat y);
 bool mpz_prime(Vecdat x);
 
 uint64_t trailing_zeros(const Mpzdat *self);
-
-} // extern "C"
+*/
+//} // extern "C"
