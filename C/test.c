@@ -1,5 +1,3 @@
-//#include<iostream>
-//#include <cstdint>
 #include <stdio.h>
 #include "numbertheory.h"
 
