@@ -41,9 +41,9 @@ In the future this library may be distributed in the Debian repository
   Ada implements exception handling for values that cannot be computed within the integer range or do not exist
   
 # C
-
+Not implemented
 # C++
-
+Not implemented
 # Fortran
  Generically implemented NumberTheory for Integer(Kind=4) and Integer(Kind=8)
  To use run 
@@ -51,8 +51,9 @@ In the future this library may be distributed in the Debian repository
  gfortran test.f08 numbertheory.f08 /lib/numbertheory.so
  ```
 # Julia
-To use this library include it at the start of the file or REPL
+To use this library include it at the start of the file or REPL. (incomplete)
 ``` julia
  include("/Nt-Bind/numbertheory.jl")
 ```
 # Python
+Not implemented
