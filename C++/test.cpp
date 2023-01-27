@@ -1,6 +1,6 @@
 #include<iostream>
 #include <cstdint>
-#include "numbertheory"
+#include "numbertheory.hpp"
 
 int main(){
 const int64_t x = -2147483647;
